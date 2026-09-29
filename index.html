@@ -3,62 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cerebritos en Acción - Aprendemos Jugando</title>
+    <title>Cerebritos en Acción</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Fuente Fredoka de Google Fonts (ideal para sitios infantiles) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <a href="#contenido-principal" class="saltar-contenido">Saltar al contenido principal</a>
 
-    <header>
-        <h1>Cerebritos en Acción</h1>
-        <nav aria-label="Menú principal">
-            <ul>
-                <li><a href="index.html" aria-current="page">Inicio</a></li>
-                <li><a href="IA.html">Documentación IA</a></li>
-            </ul>
-        </nav>
+    <!-- Encabezado y Navegación -->
+    <header class="header">
+        <div class="container header-container">
+            <h1 class="logo">🧠 Cerebritos en Acción 🚀</h1>
+            <nav class="nav">
+                <a href="#cursos">Cursos</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
     </header>
 
-    <main id="contenido-principal">
-        <section aria-labelledby="titulo-catalogo">
-            <h2 id="titulo-catalogo">Catálogo de Cursos</h2>
-            
-            <div class="catalogo-grid">
-                
-                <article class="tarjeta-curso">
-                    <img src="img/sumar.jpg" alt="Números de colores sonriendo">
-                    <h3>Aprendo a sumar</h3>
-                    <p>Aprende a sumar hasta 10 usando dibujos muy divertidos.</p>
-                    <a href="cursos/sumar.html" class="btn-primario">Entrar al curso</a>
-                </article>
+    <!-- Sección de Bienvenida -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h2>¡Aprender nunca fue tan divertido! 🎉</h2>
+            <p>Aprende cosas increíbles con juegos, colores y desafíos diseñados especialmente para ti.</p>
+            <a href="#cursos" class="btn-main">Ver Cursos</a>
+        </div>
+    </section>
 
-                <article class="tarjeta-curso">
-                    <img src="img/dividir.jpg" alt="Manzanas repartidas en diferentes canastas">
-                    <h3>Aprendo a dividir</h3>
-                    <p>Descubre cómo repartir objetos en partes iguales.</p>
-                    <a href="cursos/dividir.html" class="btn-primario">Entrar al curso</a>
-                </article>
+    <!-- Contenido Principal: Cursos -->
+    <main class="container" id="cursos">
+        <h2 class="section-title">Elige tu aventura de aprendizaje</h2>
+        
+        <div class="courses-grid">
+            <!-- Curso 1 -->
+            <article class="course-card card-sumar">
+                <div class="card-icon">🍎</div>
+                <h3>Aprendo a sumar</h3>
+                <p>Descubre lo divertido que es contar y sumar frutas, juguetes y estrellas.</p>
+                <button class="btn-card" id="btn-sumar">¡Empezar a sumar!</button>
+            </article>
 
-                <article class="tarjeta-curso">
-                    <img src="img/zapatos.jpg" alt="Un zapato deportivo con los cordones sueltos">
-                    <h3>Aprendo a amarrarme los zapatos</h3>
-                    <p>Paso a paso para hacer el nudo base y las orejas de conejo.</p>
-                    <a href="cursos/zapatos.html" class="btn-primario">Entrar al curso</a>
-                </article>
+            <!-- Curso 2 -->
+            <article class="course-card card-dividir">
+                <div class="card-icon">🍕</div>
+                <h3>Aprendo a dividir</h3>
+                <p>Aprende a repartir en partes iguales de forma muy sencilla y visual.</p>
+                <button class="btn-card" id="btn-dividir">¡Empezar a dividir!</button>
+            </article>
 
-                <article class="tarjeta-curso">
-                    <img src="img/internet.jpg" alt="Un escudo brillante protegiendo una computadora">
-                    <h3>Me cuido en internet</h3>
-                    <p>Mis datos son míos. Aprende a navegar seguro.</p>
-                    <a href="cursos/internet-seguro.html" class="btn-primario">Entrar al curso</a>
-                </article>
+            <!-- Curso 3 -->
+            <article class="course-card card-zapatos">
+                <div class="card-icon">👟</div>
+                <h3>Aprendo a amarrarme los zapatos</h3>
+                <p>Conoce el truco de las orejitas de conejo para atar tus pasadores como un campeón.</p>
+                <button class="btn-card" id="btn-zapatos">¡Ver el truco!</button>
+            </article>
 
-            </div>
-        </section>
+            <!-- Curso 4 -->
+            <article class="course-card card-internet">
+                <div class="card-icon">🛡️</div>
+                <h3>Me cuido en internet</h3>
+                <p>Aprende las reglas de oro para navegar, jugar y divertirte en la red de forma segura.</p>
+                <button class="btn-card" id="btn-internet">¡Aprender a cuidarme!</button>
+            </article>
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Cerebritos en Acción. Plataforma segura para niños.</p>
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Cerebritos en Acción — ¡Aprender jugando es crecer sonriendo!</p>
+        </div>
     </footer>
+
+<!-- AÑADE ESTO JUSTO ANTES DE </body> -->
+    <div id="modal-interactivo" class="modal-oculto">
+        <div class="modal-contenido">
+            <span id="cerrar-modal">✖</span>
+            <div id="juego-contenedor">
+                <!-- Aquí aparecerán los juegos dinámicamente -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Conecta el archivo de JavaScript -->
+    <script src="app.js"></script>
+
+
 </body>
 </html>
